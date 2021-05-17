@@ -17,10 +17,10 @@ case_time_series_csv_url = "https://api.covid19india.org/csv/latest/case_time_se
 # 2. Statewise timeseries of Confirmed, Recovered and Deceased numbers. [Reading]
 states_csv_url = "https://api.covid19india.org/csv/latest/states.csv"	
 
-# 3. Districtwise timeseries of Confirmed, Recovered and Deceased numbers.
+# 3. Districtwise timeseries of Confirmed, Recovered and Deceased numbers. [Reading]
 districts_csv_url = "https://api.covid19india.org/csv/latest/districts.csv"	
 
-# 4. Statewise per day delta of Confirmed, Recovered and Deceased numbers.
+# 4. Statewise per day delta of Confirmed, Recovered and Deceased numbers. [Reading]
 state_wise_daily_csv_url = "https://api.covid19india.org/csv/latest/state_wise_daily.csv"
 
 # 5. Statewise cumulative numbers till date. [Reading]
@@ -44,7 +44,7 @@ sources_list_csv_url = "https://api.covid19india.org/csv/latest/sources_list.csv
 # 11. Number of RTPCR samples collected statewise in ICMR Application
 rtpcr_samples_collected_csv_url	= "http://api.covid19india.org/csv/latest/icmr_rtpcr_tests_daily.csv"	
 
-# 12. Number of vaccine doses administered statewise
+# 12. Number of vaccine doses administered statewise [Reading]
 vaccine_doses_administered_statewise_csv_url = "http://api.covid19india.org/csv/latest/vaccine_doses_statewise.csv"	
 
 # 13. Key data points from CoWin database at a state level
@@ -52,38 +52,4 @@ cowin_vaccine_data_statewise = "http://api.covid19india.org/csv/latest/cowin_vac
 
 # 14. Key data points from CoWin database at a district level
 cowin_vaccine_data_districtwise = "http://api.covid19india.org/csv/latest/cowin_vaccine_data_districtwise.csv"	
-
-
-#
-# {
-#   "StateCode": {
-#     "dates": {
-#         "YYYY-MM-DD":{
-#             "delta": {
-#                 "confirmed": <specificDaysConfirmedDelta>,
-#                 "recovered": <specificDaysRecoveredDelta>,
-#                 "deceased": <specificDaysDeceasedDelta>,
-#                 "tested": <specificDaysTestedDelta>,
-#                 "vaccinated": <specificDaysVaccinatedDelta>
-#             },
-#             "delta7": {
-#                 "confirmed": <7DmaConfirmedDelta>,
-#                 "recovered": <7DmaRecoveredDelta>,
-#                 "deceased": <7DmaDeceasedDelta>,
-#                 "tested": <7DmaTestedDelta>,
-#                 "vaccinated": <7DmaVaccinatedDelta>
-#             },
-#             "total": {
-#                 "confirmed": <TotalConfirmedTillDate>,
-#                 "recovered": <TotalRecoveredTillDate>,
-#                 "deceased": <TotalDeceasedTillDate>,
-#                 "tested": <TotalTestedTillDate>,
-#                 "vaccinated": <TotalVaccinatedTillDate>
-#             }
-#         },
-#         .
-#         .
-#         .
-        
-#     }
 

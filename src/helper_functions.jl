@@ -11,7 +11,7 @@ end
 function read_CSV_url(url::String)
     try
         response = HTTP.get(url)
-        df = CSV.read(response.body)
+        df = CSV.read(response.body, DataFrame)
         return df 
     catch e 
         return e 
