@@ -1,4 +1,10 @@
 # 3. Districtwise timeseries of Confirmed, Recovered and Deceased numbers.
+
+# function get_district_timeseries(state::String)
+#     df = read_CSV_url(districts_csv_url)
+#     return df[df[!,:State].==state,:] 
+# end 
+
 function get_district_timeseries(district::String)
     df = read_CSV_url(districts_csv_url)
     return df[df[!,:District].==district,:] 

@@ -48,8 +48,8 @@ rtpcr_samples_collected_csv_url	= "http://api.covid19india.org/csv/latest/icmr_r
 vaccine_doses_administered_statewise_csv_url = "http://api.covid19india.org/csv/latest/vaccine_doses_statewise.csv"	
 
 # 13. Key data points from CoWin database at a state level
-cowin_vaccine_data_statewise = "http://api.covid19india.org/csv/latest/cowin_vaccine_data_statewise.csv"
+cowin_vaccine_data_statewise_csv_url = "http://api.covid19india.org/csv/latest/cowin_vaccine_data_statewise.csv"
 
 # 14. Key data points from CoWin database at a district level
-cowin_vaccine_data_districtwise = "http://api.covid19india.org/csv/latest/cowin_vaccine_data_districtwise.csv"	
+cowin_vaccine_data_districtwise_csv_url = "http://api.covid19india.org/csv/latest/cowin_vaccine_data_districtwise.csv"	
 

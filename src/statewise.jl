@@ -117,11 +117,24 @@ end
 
 function get_vaccine_doses_administered_yesterday()
     df = get_vaccine_doses_administered_timeseries_statewise()
-    df = df[!,[1,end-2, end-1,end]]
+    #dttoday = Dates.format(Dates.now(), "dd/mm/yyyy") 
+    dtyesterday = Dates.format(Dates.now() - Dates.Day(1), "dd/mm/yyyy")
+    dt_dby = Dates.format(Dates.now() - Dates.Day(2), "dd/mm/yyyy")
+    dt_dbdby = Dates.format(Dates.now() - Dates.Day(3), "dd/mm/yyyy")
+    df = df[!,["State",dt_dbdby, dt_dby,dtyesterday]]
     df.delta_today = df[!,4]-df[!,3]
     df.delta_yesterday = df[!,3]-df[!,2]
     df.delta_diff = df.delta_today - df.delta_yesterday
     sort!(df,:delta_today, rev=true)
     return df
 end 
+
+# 13. Key data points from CoWin database at a state level
+function get_cowin_vaccine_data_statewise(brief::Bool=false)
+    df = read_CSV_url(cowin_vaccine_data_statewise_csv_url)
+    if brief == true 
+        df = df[!,[]]
+    end 
+    return df
+end
 
